@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.6">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>STUDENT ENTRY FORM</h1>
+    <br><br>
+    <form action="">
+        STUDENT ID: <input type="text" id="stdid" /><br><br>
+        FIRST NAME: <input type="text" id="fname" /><br><br>
+        SURNAME: <input type="text" id="sname" /><br><br>
+        SEMESTER: <select name="semester" id="semester">
+            <option value="1st Semester">1</option>
+            <option value="1st Semester">2</option>
+            <option value="3rd Semester">3</option>
+            <option value="4th Semester">4</option>
+            <option value="5th Semester">5</option>
+            <option value="6th Semester">6</option>
+            <option value="7th Semester">7</option>
+            <option value="8th Semester">8</option>
+        </select><br><br>
+        <p><input type="reset" value="Reset" onclick="disp2();">
+        <input type="button" value="Save" onclick="disp();"></p>
+
+    </form>
+
+    <p >Student Number: <span id="stdid_span"></span><br>Semester: <span id="smstr"></span></p>
+</center>
+
+<script>
+    function disp(){
+        var stdid = document.getElementById("stdid").value;
+        document.getElementById("stdid_span").innerHTML=stdid;
+        var c=document.getElementById("semester").value;
+        document.getElementById("smstr").innerHTML=c;
+       
+
+        
+       
+
+    }
+
+    function disp2(){
+        document.getElementById("stdid_span").innerHTML='';
+        document.getElementById("smstr").innerHTML='';
+    }
+
+</script>
+</body>
+
+
+</html>
